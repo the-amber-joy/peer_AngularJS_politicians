@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Politiks iz Kewl!</title>
+
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <script src="scripts/vendors/angular.min.js"></script>
+    <script src="scripts/client.js"></script>
+
+</head>
+<body ng-controller="doThings">
+
+    <h2>Welcome to Indecision 2016!</h2>
+    <button ng-click=getCans()>Clik for ze Candidorkz!</button>
+
+    <ul>
+        <li ng-repeat="person in names">{{'Name: ' + person.Name + '  |  Hails from: ' + person.Home + '  |  Partay: ' + person.Party}}</li>
+    </ul>
+    <div class="button-box"><button ng-show=goButton ng-click=pickWin()>Who won? Who cares?</button></div>
+    <h1>{{winnerPost}}</h1>
+
+</body>
+</html>
